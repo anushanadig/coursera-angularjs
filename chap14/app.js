@@ -14,6 +14,10 @@
         $scope.incVal  = function(){
             $scope.val++;
         }
+
+        $scope.$watch(function(){
+            console.log("digest loop fired!");
+        })
         /* $scope.$watch('val',function(newValue,oldValue){
             console.log("old:",oldValue);
             console.log("new:",newValue);
