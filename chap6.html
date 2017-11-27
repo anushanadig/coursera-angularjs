@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app='NameCalculator'>
+    <head>
+        <title>Name Calculator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app6.js"></script>
+    </head>
+    <body>
+        <div ng-controller="NameCalculatorController">
+        Enter name: <input type="text" ng-model="name" >
+    </br>
+        Numeric value of {{name}} is {{calculateValue()}}
+    </div>
+    </body>
+</html>

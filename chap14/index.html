@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app='digestApp'>
+    <head>
+        <title>digestApp</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="diegstController">
+            {{val}}
+            <button ng-click="showNumOfWatchers()">number of watchers</button>
+            <div>
+                    <button ng-click="incVal()">inc val</button>
+            </div>
+        </div>
+    </body>
+    </html>
