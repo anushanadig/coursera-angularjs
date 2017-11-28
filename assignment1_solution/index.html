@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app='foodApp'>
+    <head>
+        <title>foodApp</title>
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="foodController">
+                <input type = "text" ng-model="foodList" ng-class="{'red-box': state === false, 'green-box': state === true}"></br></br>
+               <button ng-click="checkList()">Check If Too Much</button>
+        </br>
+        <span ng-class="{'color-red': state === false, 'color-green': state === true}">{{message}}</span>
+        </div>
+    </body>
+    </html>
