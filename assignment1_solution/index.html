@@ -8,10 +8,10 @@
     </head>
     <body>
         <div ng-controller="foodController">
-                <input type = "text" ng-model="foodList" ng-class="{'black-box': state == undefined,'red-box': !state, 'green-box': state }"></br></br>
+                <input type = "text" ng-model="foodList" ng-class="{'red-box':isValid === 'red', 'green-box': isValid === 'green' }"></br></br>
                <button ng-click="checkList()">Check If Too Much</button>
         </br>
-        <span ng-class="{'color-red': !state , 'color-green': state }">{{message}}</span>
+        <span ng-class="{'color-red': isValid === 'red' , 'color-green': isValid === 'green' }">{{message}}</span>
         </div>
     </body>
     </html>
