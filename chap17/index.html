@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+    <head>
+        <title>ShoppingList</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="shoppingController">
+            <h4>SHOPPING LIST</h4>
+            <!-- <ul>
+                <li ng-repeat ="item in shoppingList1">{{item}}</li>
+            </ul> -->
+            <input type="text" ng-model = "shoppingList2[0].price">
+            <ul>
+                <li ng-repeat ="item in shoppingList2">{{$index+1}} {{item.name}}  {{item.price}}</li>
+            </ul>
+
+            <input type="text" ng-model="newItem" placeholder="new item name"></br><br>
+            <input type="text" ng-model="newPrice" placeholder="new item price" ><br><br>
+            <button ng-click="addToList()">Add to list</button>
+        </div>
+    </body>
+</html>
