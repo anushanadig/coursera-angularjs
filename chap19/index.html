@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='ScopeInheritanceApp'>
+    <head>
+        <title>ScopeInheritance</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="ParentController as parent">
+            Parent value: {{parent.value}}
+            <div ng-controller="ChildController as child" >
+                Child value: {{child.value}}
+                Parent value: {{parent.value}}
+            </div>
+            
+        </div>
+    </body>
+</html>
