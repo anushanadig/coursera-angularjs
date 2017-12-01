@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+    <head>
+        <title>ShoppingList</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h4>SHOPPING LIST1(unlimited items)</h4>
+
+        <!-- list 1 with unlimited items -->
+        <div ng-controller="shoppingListController1 as list1">
+           <input type="text" ng-model="list1.itemName" placeholder="item name">
+           <br><br>
+           <input type="text" ng-model="list1.itemPrice" placeholder="item price">
+            <br>
+           <button ng-click="list1.addItem()">ADD TO LIST</button>
+        
+            <ul>
+                <li ng-repeat ="item in list1.items">{{item.name}} : {{item.price}}
+                        <button ng-click="list1.removeItem($index)">remove item</button>
+                </li>
+                
+            </ul>
+            <div class="error">Error: {{list1.errorMessage}}</div>
+        </div>
+
+        <h4>SHOPPING LIST2</h4>
+        
+                <!-- list 1 with max 5 items -->
+                <div ng-controller="shoppingListController2 as list2">
+                   <input type="text" ng-model="list2.itemName" placeholder="item name">
+                   <br><br>
+                   <input type="text" ng-model="list2.itemPrice" placeholder="item price">
+                    <br>
+                   <button ng-click="list2.addItem()">ADD TO LIST</button>
+                    <ul>
+                        <li ng-repeat ="item in list2.items">{{item.name}} : {{item.price}}
+                                <button ng-click="list2.removeItem($index)">remove item</button>
+                        </li>
+                        
+                    </ul>
+                    
+                    <div class="error">Error: {{list1.errorMessage}}</div>
+            
+                </div>
+         </body>
+</html>
