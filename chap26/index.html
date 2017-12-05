@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+
+<head>
+    <title>ShoppingList</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <h4>SHOPPING list1(unlimited items)</h4>
+
+    <!-- list 1 with unlimited items -->
+    <div ng-controller="shoppingListController1 as list">
+        <input type="text" ng-model="list.itemName" placeholder="item name">
+        <br>
+        <br>
+        <input type="text" ng-model="list.itemPrice" placeholder="item price">
+        <br>
+        <button ng-click="list.addItem()">ADD TO LIST</button>
+
+        <ul>
+            <list-item ng-repeat="item in list.items"></list-item>
+        </ul>
+        <div class="error">Error: {{list.errorMessage}}</div>
+    </div>
+
+
+
+    <h4>SHOPPING LIST2</h4>
+
+    <!-- list 2 with max 5 items -->
+    <div ng-controller="shoppingListController2 as list">
+        <input type="text" ng-model="list.itemName" placeholder="item name">
+        <br>
+        <br>
+        <input type="text" ng-model="list.itemPrice" placeholder="item price">
+        <br>
+        <button ng-click="list.addItem()">ADD TO LIST</button>
+        <ul>
+            <list-item ng-repeat="item in list.items"></list-item>
+        </ul>
+
+        <div class="error">Error: {{list.errorMessage}}</div>
+
+    </div>
+</body>
+
+</html>
