@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+
+<head>
+    <title>MENU CATEGORIES</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <h4>MENU CATEGORIES</h4>
+
+
+    <div ng-controller="menuController as menu">
+
+        <ul>
+            <li ng-repeat="category in menu.categories">
+                (
+                <a href="" ng-click="menu.logMenuItems(category.short_name)">{{category.short_name}}</a>) {{category.name}}
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
